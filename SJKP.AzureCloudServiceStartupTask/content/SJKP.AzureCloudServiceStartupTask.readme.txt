@@ -1,0 +1,19 @@
+﻿This nuget package include 3 useful powershell commandline that will configure all IIS application 
+pools with the following settings: 
+
+1) Application pool idle timeout is removed
+2) Application pool periodic recylce times is removed
+
+To configure the task as part of you Cloud Service add the following to your ServiceDefinition.csdef
+
+
+	<Startup>
+      <Task commandLine="startup.cmd" executionContext="elevated" taskType="simple">
+        <Environment>
+          <Variable name="EMULATED">
+            <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
+          </Variable>         
+        </Environment>
+      </Task>
+    </Startup>
+
