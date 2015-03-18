@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SJKP.AzureCloudServiceStartupTask</id>
-    <version>1.0.0.2</version>
+    <version>1.0.0.4</version>
     <title>Azure Cloud Service Startup Task</title>
     <authors>SJKP</authors>
     <owners>SJKP</owners>
@@ -10,14 +10,14 @@
     <projectUrl>http://sjkp.dk</projectUrl>
     <iconUrl>http://sjkp.dk</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Startup tasks that configures IIS Application Pools to not idle and to recycle at specific times.</description>
+    <description>Startup tasks that configures IIS Application Pools to not idle and removes periodic recycle.</description>
     <releaseNotes>First release, including content</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>Azure Cloud Service Statup Task Delegate SJKP</tags>
   </metadata>
   <files>
     <file src="tools\install.ps1" target="tools"></file>
-    <file src="Content\Set-ApplicationPoolSettings.ps1" target="content" />
+    <file src="Content\Execute-StartupTasks.ps1" target="content" />
     <file src="Content\SJKP.AzureCloudServiceStartupTask.readme.txt" target="content"></file>
     <file src="Content\startup.cmd" target="content"></file>    
   </files>
